@@ -1,7 +1,8 @@
 import './public/css/normalize.css'
 import './public/css/style.css'
-import Cart from  './public/js/Cart.js'
-import  Catalog from './public/js/Catalog.js'
+import Vue from 'vue'
+import app from './public/components/app.vue'
 
-let cart = new Cart();
-let catalog = new Catalog(cart);
+new Vue({
+    render: h => h(app)
+}).$mount('#app');

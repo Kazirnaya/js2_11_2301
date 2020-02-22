@@ -1,6 +1,9 @@
 import './public/style/normalize.css'
 import './public/style/style.css'
-// import './public/js/bad_main.js'
-import app from './public/js/main.js'
+// import './public/js/main.js'
+import Vue from 'vue'
+import app from './public/components/app.vue'
 
-app ()
+new Vue ({
+    render: h => h(app)
+}).$mount('#app')
