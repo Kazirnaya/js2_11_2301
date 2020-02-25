@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //шаблон, который заменяет одинарные кавычки на двойные.
+        let regexp = /'/g;
+        let text = prompt('text,pls');        
+        console.log(text.replace(regexp, '\"'));
+
+        // в конструкциях типа aren't одинарная кавычка не заменялась на двойную.
+        regexp = /'(.+)'/g;
+        text = prompt('text,pls');        
+        console.log(text.replace(regexp, '\"$1\"'));
+
+    </script>
+</body>
+</html>
